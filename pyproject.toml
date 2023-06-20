@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "raspurify-server"
+version = "0.1.0"
+description = ""
+authors = ["jailbreakerVC <54243183+jailbreakerVC@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "raspurify_server"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Flask = "^2.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
