@@ -1,14 +1,14 @@
-from flask import Flask, jsonify
 import socket
-# import schedule
-# import time
-import geopy
 import os
-import requests
 import json
-from dotenv import load_dotenv
+import requests
 import sqlite3
 import datetime
+
+import geopy
+
+from flask import Flask, jsonify
+from dotenv import load_dotenv
 
 
 load_dotenv(".env")
