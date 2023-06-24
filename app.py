@@ -20,12 +20,14 @@ app = Flask(__name__)
 
 connected_nodes = []
 
+geolocator = geopy.Nominatim(user_agent="Raspurify-server")
+location = geolocator.geocode(os.getenv("LOCATION"))
+lat = location.latitude
+lon = location.longitude
+
 
 def fetchAQI():
-    geolocator = geopy.Nominatim(user_agent="Raspurify-server")
-    location = geolocator.geocode(os.getenv("LOCATION"))
-    lat = location.latitude
-    lon = location.longitude
+
     response = requests.get(
         f"http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={os.getenv('OWP_KEY')}")
     print("response: ", response.json())
