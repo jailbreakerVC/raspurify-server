@@ -9,6 +9,10 @@ packages = [{include = "raspurify_server"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 Flask = "^2.3.2"
+schedule = "^1.2.0"
+geopy = "^2.3.0"
+load-dotenv = "^0.1.0"
+requests = "^2.31.0"
 
 
 [build-system]
