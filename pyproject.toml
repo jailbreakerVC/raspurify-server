@@ -13,6 +13,7 @@ schedule = "^1.2.0"
 geopy = "^2.3.0"
 load-dotenv = "^0.1.0"
 requests = "^2.31.0"
+db-sqlite3 = "^0.0.1"
 
 
 [build-system]
