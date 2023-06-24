@@ -17,7 +17,7 @@ hostname = socket.gethostname()
 ip_address = socket.gethostbyname(hostname)
 app = Flask(__name__)
 
-# get current cordinates
+
 connected_nodes = []
 
 
