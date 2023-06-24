@@ -1,4 +1,4 @@
-import socket
+# import socket
 import os
 import json
 import requests
@@ -13,8 +13,8 @@ from dotenv import load_dotenv
 
 load_dotenv(".env")
 
-hostname = socket.gethostname()
-ip_address = socket.gethostbyname(hostname)
+# hostname = socket.gethostname()
+# ip_address = socket.gethostbyname(hostname)
 app = Flask(__name__)
 
 
@@ -108,4 +108,4 @@ def latest():
 
 
 if __name__ == '__main__':
-    app.run(port=3000, host=hostname)
+    app.run(port=3000, host='0.0.0.0')
