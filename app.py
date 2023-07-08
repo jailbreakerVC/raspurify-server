@@ -1,4 +1,3 @@
-# import socket
 import os
 import json
 import requests
@@ -13,8 +12,7 @@ from dotenv import load_dotenv
 
 load_dotenv(".env")
 
-# hostname = socket.gethostname()
-# ip_address = socket.gethostbyname(hostname)
+
 app = Flask(__name__)
 
 
@@ -39,7 +37,6 @@ def fetchAQI():
                     aqi INTEGER
                 )''')
     timestamp = str(datetime.datetime.now())
-    # date = str(datetime.date.today())
     aqi = response.json()["list"][0]["main"]["aqi"]
     c.execute('INSERT INTO air_quality (timestamp, aqi) VALUES (?, ?)',
               (timestamp, aqi))
