@@ -55,6 +55,13 @@ def hello():
     return fetchAQI()
 
 
+@app.route('/start', methods=["GET"])
+def start():
+    return {
+        'status': 'success',
+    }
+
+
 @app.route('/print', methods=["GET"])
 def printt():
     conn = sqlite3.connect('example.db')
